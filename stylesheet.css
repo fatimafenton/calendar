@@ -3,10 +3,6 @@
 }
 main {
 	display: grid;
-	grid-template-columns: 80px repeat(7, 1fr);
-	grid-template-rows: repeat(6, 1fr);
-	margin: 100px;
-	border: 1px solid  #E7E7E7 ;
 }
 
 h1 {
@@ -16,42 +12,32 @@ h1 {
 }
 
 .right-buttons {
-	grid-column: 7 / 8;
+	grid-template-columns: 6 / 7;
 	grid-row: 1 / 2;
 	bottom: 0;
+	align-self: center;
 }
 
 hr {}
 .days {
 	/*float: right;*/
 }
-#sun {
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-	float: right;
+
+.week {
+	display: flex;
 }
 
-#Mon {
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
+.day {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;
 }
-#Tue {
-	grid-column: 3 / 4;
-	grid-row: 2 / 3;
+.day {
+  color: #333;
+  padding: 5px;
+  border: 1px solid  #E7E7E7;
 }
-#Wed {
-	grid-column: 4 / 5;
-	grid-row: 2 / 3;
-}
-#Thurs {
-	grid-column: 5 / 6;
-	grid-row: 2 / 3;
-}
-#Fri {
-	grid-column: 6 / 7;
-	grid-row: 2 / 3;
-}
-#Sat {
-	grid-column: 7 / 8;
-	grid-row: 2 / 3;
+
+.week {
+  height: 80px;
 }
